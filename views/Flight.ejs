@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Schedule</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/FlightCss.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="/graphics/logo2.png" alt="Logo">
+            <span class="title">AirSyncHK</span>
+        </div>
+        <div class="user-info">
+            <span class="user-name" id="user-name"><%= name %></span>
+            <button class="logout-button" onclick="location.href='/logout'">LOG OUT</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <a href="/check">AIRPORT NEWS</a>
+            <p></p>
+            <a href="/flight" class="active">FLIGHT SCHEDULE</a>
+            <p></p>
+            <a href="/claim">CLAIM/REPORT LOST</a>
+        </div>
+        <div class="main-content">
+            <div class="table-container">
+                <form action="/flight" method="post">
+                    <div class="search-container">
+                        <span class="search-title">FLIGHT SCHEDULE</span>
+                        <input type="text" id="search-input" class="search-input" name="search_input" placeholder="Search by flightNo" >
+                        <button class="search-button"  type="submit">ENTER</button>
+                    </div>
+                </form>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>FLIGHT NO.</th>
+                            <th>DEPARTURE</th>
+                            <th>LANDING</th>
+                            <th>DATE</th>
+                            <th>DEPARTURE TIME</th>
+                            <th>LANDING TIME</th>
+                            <th>STATUS</th>
+                            <th>GATE</th>
+                        </tr>
+
+                    </thead>
+                    <tbody id="flight-data">
+                        <!-- Data will be inserted here -->
+                        <% for(let i=0; i < flight_obj_array.length; i++) {%>
+                            <tr>
+                              <td><%= flight_obj_array[i].flightNo %></td>
+                              <td><%= flight_obj_array[i].departure%></td>
+                              <td><%= flight_obj_array[i].landing%></td>
+                              <td><%= flight_obj_array[i].date%></td> 
+                              <td><%= flight_obj_array[i].departureTime%></td> 
+                              <td><%= flight_obj_array[i].landingTime%></td>
+                              <td><span class="<%- flight_obj_array[i].status.replace(' ','').toLowerCase()%>"><%= flight_obj_array[i].status%></span></td>
+                              <td><%= flight_obj_array[i].gate%></td>       
+                            </tr>
+                          <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
