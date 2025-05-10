@@ -21,6 +21,10 @@
     - password: 123
   
 ===========================================================================</br>
+
+ ![image](https://github.com/user-attachments/assets/58c232ba-039a-4332-8ba8-d6c6519e78a0)
+</br>
+==========================================================================</br>
 Use Case Diagrams</br>
 <img width="416" alt="111" src="https://github.com/user-attachments/assets/1dbb071c-4ee4-4b1d-b05e-d99872966dee" />
 
