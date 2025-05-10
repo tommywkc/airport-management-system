@@ -21,3 +21,21 @@
     - password: 123
   
 ===========================================================================
+Use Case Diagrams
+<img width="416" alt="111" src="https://github.com/user-attachments/assets/1dbb071c-4ee4-4b1d-b05e-d99872966dee" />
+
+
+
+Sequence Diagrams (Customer Service)
+<img width="416" alt="222" src="https://github.com/user-attachments/assets/df65ad69-42ec-4cfb-b209-62198c50c979" />
+
+ 
+ System Design
+ ![image](https://github.com/user-attachments/assets/c247e410-b90c-4203-8025-32cbb3aa3809)
+
+
+Database Design
+ ![image](https://github.com/user-attachments/assets/a09a5b97-abd6-4722-bab5-6af135edf6ab)
+
+
+ 
